@@ -7,7 +7,7 @@ public class JdbcUtils {
     private static String DB = "db1";
     private static String URLSTR = "jdbc:mysql://localhost:3306/";
     private static String USER = "root";
-    private static String PWD = "rootroot";
+    private static String PWD = "yxc.9894";
 
     public static Connection getConnection(String dbName) throws SQLException {
         String url=URLSTR+DB;
