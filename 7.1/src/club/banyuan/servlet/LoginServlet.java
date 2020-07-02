@@ -29,21 +29,36 @@ public class LoginServlet extends HttpServlet {
       UserDao userDao = new UserDaoImpl(JdbcUtils.getConnection());
       User user = userDao
           .getLoginUser(request.getParameter("loginName"), request.getParameter("password"));
-      PrintWriter printWriter = response.getWriter();
-
-      response.setCharacterEncoding("utf-8");
-      printWriter.println("<html>");
-      printWriter.println("<meta charset='utf-8'/>");
-      printWriter.println("<body>");
+      //PrintWriter printWriter = response.getWriter();
+      Boolean flag = false;
+      //response.setCharacterEncoding("utf-8");
       if (user != null) {
-        printWriter.println("登陆成功：" + user.getUserName());
-      } else {
-        printWriter.println("登录失败");
+        flag = true;
       }
-      printWriter.println("</body>");
-      printWriter.println("</html>");
-      printWriter.flush();
-      printWriter.close();
+      String loginname = request.getParameter("username");
+      if ("".equals(loginname.trim()) || loginname == null) {
+        request.setAttribute("error", "用户名不能为空");
+      } else {
+
+      }
+        request.getRequestDispatcher("Success.jsp").forward(request, response);
+//      if (flag){
+//        response.sendRedirect("loginSuccess.html");
+//      }else{
+//        response.sendRedirect("loginfaile.html");
+//      }
+
+//      printWriter.println("<html>");
+//      printWriter.println("<meta charset='utf-8'/>");
+//      printWriter.println("<body>"); if (user != null) {
+//        printWriter.println("登陆成功：" + user.getUserName());
+//      } else {
+//        printWriter.println("登录失败");
+//      }
+//      printWriter.println("</body>");
+//      printWriter.println("</html>");
+//      printWriter.flush();
+//      printWriter.close();
 
     } catch (SQLException throwables) {
       throwables.printStackTrace();

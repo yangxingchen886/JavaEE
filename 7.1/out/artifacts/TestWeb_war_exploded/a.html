@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script language="JavaScript">
+        $(function () {
+            $("#subBtn").click(function () {
+                var username = $("#username").val();
+                $("#loginForm").submit();
+            })
+        })
+    </script>
 </head>
 <body>
 <a href="regist.do?loginName=ad888ddaa&password=111&userName=newUser&sex=1&email=sdf#we.com&mobile=234234234">
@@ -19,10 +28,10 @@
     <input type="submit" value="注册"/>
 </form>
 
-<form action="login.do">
-    用户名：<input type="text" name="loginName"><br />
+<form action="login.do" id="loginForm" method="post">
+    用户名：<input type="text" name="username"><br />
     密码：<input type="password" name="password"><br />
-    <input type="submit" name="登陆" >
+    <input type="button" id="subBtn" value="登陆" >
 </form>
 </body>
 </html>
