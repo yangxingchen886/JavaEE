@@ -3,6 +3,7 @@ package club.banyuan.dao.impl;
 import club.banyuan.dao.UserDao;
 import club.banyuan.entity.User;
 
+import club.banyuan.util.JdbcUtils;
 import java.sql.Connection;
 import java.sql.ResultSet;
 
@@ -34,6 +35,24 @@ public class UserDaoImpl extends BaseDaoImpl implements UserDao {
             exception.printStackTrace();
         }
         return user;
+    }
+
+    @Override
+    public Boolean findUserByLoginname(String loginName) {
+        String sql = "select * from user where loginName = ?";
+        ResultSet rs = executeQuery(sql,new Object[]{loginName});
+        User user = null;
+        try {
+            if (rs.next()){
+                user = tableToClass(rs);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (user == null){
+            return true;
+        }
+        return false;
     }
 
     @Override
