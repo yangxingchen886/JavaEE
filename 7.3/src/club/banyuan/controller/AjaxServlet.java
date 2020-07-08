@@ -24,7 +24,7 @@ public class AjaxServlet extends HttpServlet {
       UserDao userDao = new UserDaoImpl(JdbcUtils.getConnection());
       Boolean flag = userDao.findUserByLoginname(loginName);
       if (flag){
-        out.println(0);
+        out.println("<script>alert('success')</script>");
       }else {
         out.println(1);
       }
