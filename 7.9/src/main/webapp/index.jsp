@@ -16,6 +16,10 @@
 
 <body>
 <div class="wrap">
+  <div style="float: left">
+    <a href="adminlogin.jsp">管路员登陆</a>
+  </div>
+
   <!-- main begin-->
   <div class="main">
     <div class="sidebar">
@@ -54,11 +58,12 @@
   <!-- main end-->
 
   <!-- footer begin-->
-  <a href="adminlogin.jsp">管路员登陆</a>
-</div>
+
+  </div>
 <!--footer end-->
 
 </div>
+
 </body>
 </html>
 

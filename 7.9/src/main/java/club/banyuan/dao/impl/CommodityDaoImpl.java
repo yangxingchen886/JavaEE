@@ -35,6 +35,23 @@ public class CommodityDaoImpl extends BaseDaoImpl implements CommodityDao {
   }
 
   @Override
+  public Commodity getRecordCom(Integer commodityId) throws SQLException {
+    String sql = "select * from commodity where id = ?";
+    ResultSet rs = executeQuery(sql, new Object[]{commodityId});
+    Commodity commodity = null;
+
+    try {
+      if (rs.next()) {
+        commodity = tableToClass(rs);
+      }
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+
+    return commodity;
+  }
+
+  @Override
   public Commodity tableToClass(ResultSet rs) throws Exception {
     Commodity commodity = new Commodity(rs.getInt("id"),
         rs.getString("commodityname"), rs.getFloat("initialprice"),

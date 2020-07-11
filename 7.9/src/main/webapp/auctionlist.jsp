@@ -25,11 +25,11 @@
         <div class="logout right">
             <%
                 Object object = session.getAttribute("user");
+                User user = (User) object;
                 if (object != null) {
-                    User user = (User) object;
-                    out.print("欢迎，" + "<a href=\"#\">" + user.getUsername() + "</a>");
-                }
-            %>
+                    %>
+              欢迎,<a href="#" ><%=user.getUsername()%></a>
+                <%}%>
             <a href="#" title="注销">
                 ，注销</a></div>
     </div>
@@ -74,7 +74,7 @@
                 </li>
                 <li><%=commodityList.get(i).getInitialPrice()%>
                 </li>
-                <li class="borderno red"><a href="#">竞拍</a></li>
+                <li class="borderno red"><a href="record.do?commodityId=<%=commodityList.get(i).getId()%>&userId=<%=user.getId()%>">竞拍</a></li>
             </ul>
                 <%}%>
 

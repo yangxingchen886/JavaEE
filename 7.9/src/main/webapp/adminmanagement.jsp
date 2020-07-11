@@ -26,10 +26,9 @@
             <%
                 Object object = session.getAttribute("adminUser");
                 if (object != null) {
-                    AdminUser adminUser = (AdminUser) object;
-                    out.print("欢迎，" + "<a href=\"#\">" + adminUser.getAdminName() + "</a>");
-                }
-            %>
+                    AdminUser adminUser = (AdminUser) object;%>
+              欢迎,<a href="#" ><%=adminUser.getAdminName()%></a>
+<%}%>
             <a href="#" title="注销">注销</a></div>
     </div>
     <div class="forms">

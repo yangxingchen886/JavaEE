@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface CommodityDao extends IBaseDao{
 public List<Commodity> getCommodityList () throws SQLException;
+public Commodity getRecordCom(Integer commodityId) throws SQLException;
 }

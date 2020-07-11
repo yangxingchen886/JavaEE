@@ -16,4 +16,11 @@ public class CommodityServiceImpl implements CommodityService {
     List<Commodity> getCommodityList = commodityDao.getCommodityList();
     return getCommodityList;
   }
+
+  @Override
+  public Commodity getRecordCom(Integer commodityId) throws Exception {
+    CommodityDao commodityDao = new CommodityDaoImpl(JdbcUtils.getConnection());
+    Commodity commodity = commodityDao.getRecordCom(commodityId);
+    return commodity;
+  }
 }
