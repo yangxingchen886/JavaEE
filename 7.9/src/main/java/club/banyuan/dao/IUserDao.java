@@ -6,5 +6,4 @@ import java.util.List;
 public interface IUserDao {
   int add(User user);
   User getLoginUser(String userName, String passWord);
-  List<User> getAll();
 }

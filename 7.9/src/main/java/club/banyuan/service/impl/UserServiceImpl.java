@@ -1,5 +1,6 @@
 package club.banyuan.service.impl;
 
+import club.banyuan.dao.IUserDao;
 import club.banyuan.dao.UserDao;
 import club.banyuan.dao.impl.UserDaoImpl;
 import club.banyuan.entity.User;

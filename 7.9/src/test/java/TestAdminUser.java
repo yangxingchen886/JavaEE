@@ -1,8 +1,7 @@
-import club.banyuan.dao.IUserDao;
-import club.banyuan.entity.User;
+import club.banyuan.dao.IAdminUserDao;
+import club.banyuan.entity.AdminUser;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -11,7 +10,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestUser {
+public class TestAdminUser {
 
   private InputStream in;
   private SqlSession session;
@@ -24,13 +23,11 @@ public class TestUser {
     session = factory.openSession();
   }
 
-
   @Test
-  public void testLogin() {
-    IUserDao iUserDao = session.getMapper(IUserDao.class);
-    User user = iUserDao.getLoginUser("aaa", "123");
-    System.out.println(user.toString());
-
+  public void TestLogin() {
+    IAdminUserDao iAdminUserDao = session.getMapper(IAdminUserDao.class);
+    AdminUser adminUser = iAdminUserDao.getAdminLogin("admin", "admin");
+    System.out.println(adminUser.getAdminName());
   }
 
   @After

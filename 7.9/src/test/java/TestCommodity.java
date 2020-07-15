@@ -1,5 +1,5 @@
-import club.banyuan.dao.IUserDao;
-import club.banyuan.entity.User;
+import club.banyuan.dao.ICommodityDao;
+import club.banyuan.entity.Commodity;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
@@ -11,7 +11,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestUser {
+public class TestCommodity {
 
   private InputStream in;
   private SqlSession session;
@@ -24,13 +24,20 @@ public class TestUser {
     session = factory.openSession();
   }
 
+  @Test
+  public void TestGetAll() {
+    ICommodityDao commodityDao = session.getMapper(ICommodityDao.class);
+    List<Commodity> commodityList = commodityDao.getCommodityList();
+    for (Commodity commodity : commodityList) {
+      System.out.println(commodity);
+    }
+  }
 
   @Test
-  public void testLogin() {
-    IUserDao iUserDao = session.getMapper(IUserDao.class);
-    User user = iUserDao.getLoginUser("aaa", "123");
-    System.out.println(user.toString());
-
+  public void TestGetComById() {
+    ICommodityDao commodityDao = session.getMapper(ICommodityDao.class);
+    Commodity commodity = commodityDao.getRecordCom(1);
+    System.out.println(commodity.toString());
   }
 
   @After

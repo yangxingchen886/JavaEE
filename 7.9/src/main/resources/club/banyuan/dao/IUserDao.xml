@@ -6,7 +6,7 @@
   <select id="add" resultType="int">
 insert into user(id,username,password,identitynumber,mobile,address,zipcode) values(null,#{username},#{password},#{identitynumber},#{mobile},#{address},#{zipcode});
 </select>
-  <select id="getAll" resultType="club.banyuan.entity.User">
-    select * from USER ;
-  </select>
+<insert id="getLoginUser" parameterType="club.banyuan.entity.User">
+  select * from user where username=#{username} and password = #{password};
+</insert>
 </mapper>

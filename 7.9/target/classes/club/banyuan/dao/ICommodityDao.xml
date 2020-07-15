@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="club.banyuan.dao.ICommodityDao">
+  <resultMap id="commodityMap" type="club.banyuan.entity.Commodity">
+    <id column="id" property="id"/>
+    <result column="commodityname" property="commodityName"/>
+    <result column="initialprice" property="initialPrice"/>
+    <result column="floorprice" property="floorPrice"/>
+    <result column="starttime" property="startTime"/>
+    <result column="endtime" property="endTime"/>
+    <result column="describe" property="describe"/>
+  </resultMap>
+<select id="getCommodityList" resultMap="commodityMap">
+  select * from commodity;
+</select>
+<select id="getRecordCom" resultType="club.banyuan.entity.Commodity">
+  select  * from commodity where id = #{id};
+</select>
+</mapper>
