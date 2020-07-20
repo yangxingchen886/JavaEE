@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="club.banyuan.dao.UserDao">
+    <insert id="add" parameterType="int">
+insert into user(id,username,password,identitynumber,mobile,address,zipcode) values(null,#{username},#{password},#{identitynumber},#{mobile},#{address},#{zipcode});
+</insert>
+    <select id="getLoginUser" resultType="club.banyuan.entity.User" >
+  select * from user where username=#{arg0} and password = #{arg1};
+</select>
+</mapper>
