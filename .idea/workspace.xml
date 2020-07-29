@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1a59a48a-d559-4adf-9f92-db55cc7c665f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/SpringBootDemo/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringBootDemo/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringBootDemo/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringBootDemo/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringBootDemo/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringBootDemo/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringBootDemo/SpringBootDemo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringBootDemo/src/main/java/club/banyuan/MySpringBootApplicition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringBootDemo/src/main/java/club/banyuan/controller/QuickStartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/club/banyuan/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/club/banyuan/controller/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/club/banyuan/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/club/banyuan/dao/CommodityDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/club/banyuan/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/club/banyuan/entity/Commodity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/club/banyuan/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/club/banyuan/service/CommodityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/club/banyuan/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/club/banyuan/service/impl/CommodityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/club/banyuan/service/impl/UserServiceImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1f5MRufndo4pm2QyAPOmaxhsoD8" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a59a48a-d559-4adf-9f92-db55cc7c665f" name="Default Changelist" comment="" />
+      <created>1595503495149</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595503495149</updated>
+      <workItem from="1595503496643" duration="19000" />
+    </task>
+    <servers />
+  </component>
+</project>

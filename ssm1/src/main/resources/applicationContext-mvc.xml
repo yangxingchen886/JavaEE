@@ -12,10 +12,10 @@
   <!-- 配置创建 spring 容器要扫描的包 -->
   <context:component-scan base-package="club.banyuan"></context:component-scan>
   <!-- 配置视图解析器 -->
-  <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-    <property name="prefix" value="/WEB-INF/pages/"></property>
-    <property name="suffix" value=".jsp"></property>
-  </bean>
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+      <property name="prefix" value="/WEB-INF/pages/"></property>
+      <property name="suffix" value=".html"></property>
+    </bean>
 
   <!--
       静态资源，不需要经过controller
@@ -27,4 +27,21 @@
   <mvc:resources location="WEB-INF/pages/js/" mapping="js/**"/>
 
   <mvc:annotation-driven/>
+<!--  <bean id="templateResolver"-->
+<!--    class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">-->
+<!--    <property name="prefix" value="/WEB-INF/pages"></property>-->
+<!--    <property name="suffix" value=".html"></property>-->
+<!--    <property name="templateMode" value="HTML"/>-->
+<!--    <property name="cacheable" value="false"/>-->
+<!--    <property name="characterEncoding" value="UTF-8"/>-->
+<!--  </bean>-->
+
+<!--  <bean id="templateEngine" class="org.thymeleaf.spring5.SpringTemplateEngine">-->
+<!--    <property name="templateResolver" ref="templateResolver"/>-->
+<!--  </bean>-->
+
+<!--  <bean id="viewResolver" class="org.thymeleaf.spring5.view.ThymeleafViewResolver">-->
+<!--    <property name="templateEngine" ref="templateEngine"/>-->
+<!--    <property name="characterEncoding" value="UTF-8"/>-->
+<!--  </bean>-->
 </beans>
