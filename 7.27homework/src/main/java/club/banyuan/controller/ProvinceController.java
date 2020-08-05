@@ -20,6 +20,7 @@ public class ProvinceController {
   public List<Province> getProvinces(Model model) {
     List<Province> provinceList = provinceService.getProvinces();
     model.addAttribute("province", provinceList);
+
     return provinceList;
   }
 }

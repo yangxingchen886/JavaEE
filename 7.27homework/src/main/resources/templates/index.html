@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+  <script>
+    function getProvinceList() {
+      $.ajax({
+        url : "localhost:8888",
+        type : "get",
+        async:false,//同步或异步
+        dataType : "json",
+        success : function(data) {
+          showName(data);
+        },
+        error : function() {
+          alert("请求超时，稍后再试！")
+        }
+      });
+    }
+    //页面数据显示
+    function showName(data) {
+      for (var i = 0; i < data.length; i++) {
+        var value = data[i];
+        var lable = value;
+        $('#province').append(
+            "<option value="+value+">" + lable + "<option>");
+      }
+    }
+  </script>
+</head>
+<body>
+<select name="province" id="province" ondblclick="getProvinceList()">
+</select>
+</body>
+</html>
